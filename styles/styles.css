@@ -1,0 +1,135 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Dark background to highlight grid lines */
+}
+
+/* Locomotive Scroll container */
+#smooth-scroll {
+    overflow: hidden;
+}
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 550px;  /* Default size for better visibility */
+    height: 550px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(128, 0, 128, 0.6) 0%, rgba(128, 0, 128, 0) 80%);
+    pointer-events: none;  /* Prevents the cursor from interfering with other interactions */
+    z-index: 1000; /* Ensures the glow stays above all other elements */
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+    filter: blur(60px); /* Adds a blur to make the glow smoother */
+    box-shadow: 0 0 60px rgba(186, 85, 211, 0.6); /* Default box shadow for initial glow */
+}
+
+/* Cursor Grow Effect when hovering over interactive elements */
+a:hover ~ .cursor-glow,
+button:hover ~ .cursor-glow,
+.interactive:hover ~ .cursor-glow {
+    width: 650px;  /* Increase glow size on hover */
+    height: 650px;
+    box-shadow: 0 0 80px rgba(186, 85, 211, 0.8); /* Maintain a consistent purple glow on hover */
+    filter: blur(80px);  /* Increased blur for a stronger glow effect */
+}
+
+
+/* Grid Background */
+.grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the grid is behind all content */
+    pointer-events: none;
+}
+
+#gridCanvas {
+    width: 100%;
+    height: 100%;
+    opacity: 1; /* Adjust opacity for better visibility */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 6em;
+    margin: 0;
+}
+
+/* Hero Title Styling */
+.hero-title {
+    font-size: 2em;  /* Smaller than name */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+/* Hero Title Icon Styling */
+.hero-title i {
+    color: rgba(186, 85, 211, 0.9); /* Bright purple to match the theme */
+}
+
+/* Last Name Styling */
+.hero h1 .last-name {
+    color: rgba(186, 85, 211, 0.9); /* Bright purple for visibility */
+}
+
+/* Skill Bubbles Styling */
+.skill-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-bubble {
+    background: linear-gradient(135deg, rgba(186, 85, 211, 1), rgba(128, 0, 128, 0.8));
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(186, 85, 211, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(186, 85, 211, 0.8);
+}
+/* Social Links Styling */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icon {
+    font-size: 2.5em;
+    color: rgba(186, 85, 211, 0.9); /* Purple color to match theme */
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: rgba(186, 85, 211, 1); /* Brighter purple on hover */
+    transform: scale(1.2);
+    text-shadow: 0 0 15px rgba(186, 85, 211, 0.7); /* Glow effect on hover */
+}

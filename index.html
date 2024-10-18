@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglas Broughton</title>
+    <link rel="icon" href="assets/img/image1.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <!-- Locomotive Scroll -->
+    <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+</head>
+<body>
+    <div id="smooth-scroll">
+        <!-- Canvas Grid Background -->
+        <div class="grid-background">
+            <canvas id="gridCanvas"></canvas>
+        </div>
+
+        <div class="cursor-glow"></div>
+
+        <section class="hero">
+            <h1>Douglas <span class="last-name">Broughton</span></h1>
+            <p class="hero-title">
+                <i class="fas fa-laptop-code"></i> Software Engineer <i class="fas fa-code"></i>
+            </p>
+            <div class="skill-bubbles">
+                <span class="skill-bubble">HTML</span>
+                <span class="skill-bubble">CSS</span>
+                <span class="skill-bubble">JavaScript</span>
+                <span class="skill-bubble">PHP</span>
+                <span class="skill-bubble">Java</span>
+                <span class="skill-bubble">Python</span>
+                <span class="skill-bubble">SQL</span>
+                <span class="skill-bubble">Git</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/douglas1107" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/douglas-broughton-3b56a022b/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:douglasmbroughton@gmail.com" class="social-icon email-icon" title="Email Me"><i class="fas fa-envelope"></i></a>
+                <a href="assets/Douglas_Broughton_Resume_Updated.pdf" class="social-icon resume-button" title="Resume Download" download><i class="fas fa-file-download"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script Files -->
+    <script src="js/scripts.js"></script>
+    <script src="canvas/grid.js"></script>
+</body>
+</html>
